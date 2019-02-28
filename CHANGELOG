@@ -1,3 +1,26 @@
+SnapT v=0.3 (TBD)
+	added expression curve analysis to remove lowly expressed transcripts
+	increased minimum basepair coverage during transcript assembly from 2.5 to 10
+	added -P option to specify minimum read coverage for transcript assembly
+	increased hisat2 alignment requirements (much more strict)
+	eliminated spliced alignment with hisat2
+	major bug fix with faulty intercept with annotation
+	added sorting of annotation as failsafe
+	added test to see if ncRNAs have a ORF longer than 1/3 their length
+	added NR protein database homology search with DIAMOND to remove proteins
+	added Rfam homology search to remove irrelevant ncRNAs
+	changed default minimum contig length (-l) to 3000
+
+SnapT v=0.2 (February 2019)
+	stringtie assembly is now guided
+	added explicit genome indexing handling
+	prokka is run if the user does not provide an annotation
+	if there is a small peptide (<100nt) encoded in a much larger (3X) transcript, it can still be called a ncRNA
+	non-coding transcripts need to overlap at least 10nt with opposite strand gene to be called antisense
+	modified tip of contig thresholding to be more stringent
+	added -l option to allow t specify smallest contig size
+	snapt scripts are now dirrectly located in /bin/
+
 SnapT v=0.1 (January 2019)
 	Wrap sRNA discovery pipeline into usable wrapper
 	First user-friendly version of SnapT
